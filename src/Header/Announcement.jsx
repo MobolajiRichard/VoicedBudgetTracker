@@ -11,7 +11,7 @@ const Container = styled.div`
 function Announcement() {
   return (
     <Container>
-        Flash sales going on now, order now and get massive discounts!
+        Flash sales going on now, Hurry, order now and get massive discounts!
     </Container>
   )
 }
