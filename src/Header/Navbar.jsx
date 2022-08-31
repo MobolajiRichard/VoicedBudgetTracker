@@ -17,6 +17,7 @@ const LeftNav = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  ${mobile({ display:'none' })}
 `;
 const Language = styled.p`
   ${mobile({ display: "none" })}
@@ -41,6 +42,7 @@ const MiddleNav = styled.div`
   font-weight: 600;
   font-size: 2rem;
   position:relative;
+  
 `;
 const Logo = styled.h1`
   display: flex;

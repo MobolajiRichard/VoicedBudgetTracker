@@ -139,7 +139,7 @@ import {
             <Phone style={{marginRight:"10px"}}/> +2348064461872
           </ContactItem>
           <ContactItem>
-            <MailOutline style={{marginRight:"10px"}} /> sinclairrichard79@gmail.com
+            <MailOutline style={{marginRight:"10px"}} /> mobolajirichard23@gmail.com
           </ContactItem>
           <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
         </Right>

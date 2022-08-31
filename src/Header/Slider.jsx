@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ display: "none" })}
+  ${mobile({ display:'none' })}
 `;
 
 const Arrow = styled.div`
@@ -39,6 +39,15 @@ const Wrapper = styled.div`
   transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
+const MobileContainer = styled.div`
+display:none;
+background-color:pink;
+box-sizing:border-box;
+flex-direction:column;
+padding:2%;
+${mobile({ display:'flex' })}
+`
+
 const Slide = styled.div`
   width: 100vw;
   height: 100vh;
@@ -63,6 +72,13 @@ const InfoContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 70px;
+`;
+
+const MTitle = styled.h1`
+  font-size: 20px;
+  font-family:cursive;
+  text-alidn:center;
+  color:white;
 `;
 
 const Desc = styled.p`
@@ -90,6 +106,7 @@ const Slider = () => {
   };
 
   return (
+    <>
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlined />
@@ -112,6 +129,10 @@ const Slider = () => {
         <ArrowRightOutlined />
       </Arrow>
     </Container>
+    <MobileContainer>
+          <MTitle>WELCOME, TO THE NUMBER ONE ONLINE BABY STORE.</MTitle>
+    </MobileContainer>
+    </>
   );
 };
 
