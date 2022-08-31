@@ -1,9 +1,8 @@
 import {
-    Facebook,
-    Instagram,
     MailOutline,
     Phone,
-    Pinterest,
+    GitHub,
+    LinkedIn,
     Room,
     Twitter,
   } from "@mui/icons-material";
@@ -23,6 +22,11 @@ import {
   `;
   
   const Logo = styled.h1`
+  font-weight: bold;
+  font-family: 'Hachi Maru Pop', cursive;
+  font-size: 2rem;
+  cursor: pointer;
+  color:#fc2861;
   ${mobile({ fontSize:"30px", textAlign:"center", margin:"0" })}`;
   
   const Desc = styled.p`
@@ -88,25 +92,28 @@ import {
     return (
       <Container>
         <Left>
-          <Logo>babyME</Logo>
+          <Logo><span style={{color:'blue'}}>baby</span>ME</Logo>
           <Desc>
            Your babies care is our number one priority, we are detrmined to give you the best,
            quality products at a very affordable prices. We are tested and trusted all over the country.
            Show your baby some love today.
           </Desc>
           <SocialContainer>
+          <a href='https://github.com/MobolajiRichard'>
             <SocialIcon color="3B5999">
-              <Facebook />
+              <GitHub />
             </SocialIcon>
+            </a>
+            <a href='https://www.linkedin.com/in/mobolaji-richard-oginni-7314b2230/'>
             <SocialIcon color="E4405F">
-              <Instagram />
+              <LinkedIn />
             </SocialIcon>
+            </a>
+            <a href="https://www.twitter.com/RichardMBJ23">
             <SocialIcon color="55ACEE">
               <Twitter />
             </SocialIcon>
-            <SocialIcon color="E60023">
-              <Pinterest />
-            </SocialIcon>
+            </a>
           </SocialContainer>
         </Left>
         <Center>

@@ -1,34 +1,28 @@
 import './App.css';
-import Header from './Header/Header';
-import Announcement from './Header/Announcement';
-import Slider from './Header/Slider';
-import Categories from './Header/Categories';
-import Products from './Header/Products';
-import Newsletter from './Header/Newsletter';
-import Footer from './Header/Footer';
+import HomePage from './pages/HomePage';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Product from './pages/Product';
 import ProductList from './pages/ProductList';
+import Checkout from './pages/Checkout';
+import Thanks from './pages/Thanks';
+import {Routes, Route} from 'react-router-dom'
+
 
 function App() {
   return (
     <div className="app">
-      <Announcement/>
-      <Header/>
-      <Slider/>
-      <h3>Categories</h3>
-      <Categories/>
-      <h3>Popular Products</h3>
-      <Products/>
-      <Newsletter/>
-      <Footer/>
-      {/* <Product/> */}
-      {/* <Register/> */}
-      {/* <Login/> */}
-      {/* <ProductList/> */}
-      {/* <Cart/> */}
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='register' element={ <Register/> }/>
+        <Route path='login' element={ <Login/> }/>
+        <Route path='cart' element={<Cart/>}/>
+        <Route path='product/:id' element={ <Product/>}/>
+        <Route path='products/:category' element={<ProductList/>}/>
+        <Route path='checkout' element={<Checkout/>}/>
+        <Route path='thank-you' element={<Thanks/>}/>
+      </Routes>
     </div>
   );
 }

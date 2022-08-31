@@ -5,6 +5,13 @@ import Products from "../Header/Products";
 import Newsletter from "../Header/Newsletter";
 import Footer from "../Header/Footer";
 import { mobile } from "../responsive";
+import { useParams } from "react-router-dom";
+import {
+  categoryClothes,
+  categoryFoods,
+  categoryDiaper,
+  categoryToys,
+} from "../data";
 
 const Container = styled.div``;
 
@@ -37,11 +44,25 @@ const Select = styled.select`
 const Option = styled.option``;
 
 const ProductList = () => {
+  const { category } = useParams();
+  const title = category.charAt(0).toUpperCase() + category.slice(1);
+
+  let product;
+
+  if (category === "foods") {
+    product = categoryFoods;
+  } else if (category === "clothes") {
+    product = categoryClothes;
+  } else if (category === "diapers") {
+    product = categoryDiaper;
+  } else {
+    product = categoryToys;
+  }
   return (
     <Container>
       <Navbar />
       <Announcement />
-      <Title>Dresses</Title>
+      <Title>{title}</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
@@ -76,7 +97,7 @@ const ProductList = () => {
           </Select>
         </Filter>
       </FilterContainer>
-      <Products />
+      <Products product={product} />
       <Newsletter />
       <Footer />
     </Container>
