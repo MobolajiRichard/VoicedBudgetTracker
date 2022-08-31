@@ -1,7 +1,6 @@
 import {
   FavoriteBorderOutlined,
   SearchOutlined,
-  ShoppingCartOutlined,
 } from "@mui/icons-material";
 import styled from "styled-components";
 import {useNavigate} from 'react-router-dom'
@@ -37,14 +36,6 @@ const Container = styled.div`
   &:hover ${Info} {
     opacity: 1;
   }
-`;
-
-const Circle = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: white;
-  position: absolute;
 `;
 
 const Image = styled.img`

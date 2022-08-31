@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { popularProducts, categoryClothes  } from "../data";
+import { popularProducts} from "../data";
 import Product from "./Product";
 import {useParams} from 'react-router-dom'
 

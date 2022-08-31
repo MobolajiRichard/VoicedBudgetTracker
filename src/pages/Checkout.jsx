@@ -110,7 +110,7 @@ function Checkout() {
   let cardNum = "";
 
   for (let i = 0; i < cardNumber.length; i++) {
-    if (i % 4 == 0 && i > 0) cardNum = cardNum.concat(" ");
+    if (i % 4 === 0 && i > 0) cardNum = cardNum.concat(" ");
     cardNum = cardNum.concat(cardNumber[i]);
   }
 
