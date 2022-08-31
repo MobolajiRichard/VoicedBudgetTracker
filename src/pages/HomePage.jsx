@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Header/Header";
+import {Header} from "../Header/Header";
 import Announcement from "../Header/Announcement";
 import Slider from "../Header/Slider";
 import Categories from "../Header/Categories";

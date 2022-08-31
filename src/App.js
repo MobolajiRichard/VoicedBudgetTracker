@@ -1,18 +1,23 @@
 import './App.css';
-import HomePage from './pages/HomePage';
-import Cart from './pages/Cart';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Product from './pages/Product';
-import ProductList from './pages/ProductList';
-import Checkout from './pages/Checkout';
-import Thanks from './pages/Thanks';
+import { lazy, Suspense } from 'react';
 import {Routes, Route} from 'react-router-dom'
+import { Fallback } from './Header/Spinner';
+
+const HomePage = lazy (()=> import('./pages/HomePage'))
+const Login = lazy (()=> import('./pages/Login'))
+const Register = lazy (()=> import('./pages/Register'))
+const Product = lazy (()=> import('./pages/Product'))
+const ProductList = lazy (()=> import('./pages/ProductList'))
+const Checkout = lazy (()=> import('./pages/Checkout'))
+const Cart = lazy (()=> import('./pages/Cart'))
+const Thanks = lazy (()=> import('./pages/Thanks'))
+
 
 
 function App() {
   return (
     <div className="app">
+      <Suspense fallback={<Fallback/>}>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='register' element={ <Register/> }/>
@@ -23,6 +28,7 @@ function App() {
         <Route path='checkout' element={<Checkout/>}/>
         <Route path='thank-you' element={<Thanks/>}/>
       </Routes>
+          </Suspense>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
 import Announcement from "../Header/Announcement";
 import Footer from "../Header/Footer";
-import Navbar from "../Header/Navbar";
+import {Header} from "../Header/Header";
 import Newsletter from "../Header/Newsletter";
 import { mobile } from "../responsive";
 import { useSelector , useDispatch} from "react-redux";
@@ -156,7 +156,7 @@ const Cart = () => {
   const navigate = useNavigate()
   return (
     <Container>
-      <Navbar />
+      <Header />
       <Announcement />
       <Wrapper>
         <Title>YOUR PRODUCTS</Title>
