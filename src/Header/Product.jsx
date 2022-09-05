@@ -5,7 +5,6 @@ import {
 import styled from "styled-components";
 import {useNavigate} from 'react-router-dom'
 import {LazyLoadImage} from 'react-lazy-load-image-component'
-import {Grid} from '@mui/material'
 
 const Info = styled.div`
   opacity: 0;
@@ -38,11 +37,6 @@ const Container = styled.div`
   &:hover ${Info} {
     opacity: 1;
   }
-`;
-
-const Image = styled.img`
-  height: 75%;
-  z-index: 2;
 `;
 
 const Icon = styled.div`
