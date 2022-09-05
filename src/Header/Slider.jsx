@@ -2,6 +2,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
@@ -61,10 +62,6 @@ const ImgContainer = styled.div`
   flex: 1;
 `;
 
-const Image = styled.img`
-  height: 100%;
-`;
-
 const InfoContainer = styled.div`
   flex: 1;
   padding: 50px;
@@ -115,7 +112,7 @@ const Slider = () => {
         {sliderItems.map((item) => (
           <Slide bg={item.bg} key={item.id}>
             <ImgContainer>
-              <Image src={item.img} />
+              <LazyLoadImage height={'100%'} src={item.img} />
             </ImgContainer>
             <InfoContainer>
               <Title>{item.title}</Title>
