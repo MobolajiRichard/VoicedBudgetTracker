@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import {useNavigate} from 'react-router-dom'
+import {LazyLoadImage} from 'react-lazy-load-image-component'
+import './style.css'
 
 const Container = styled.div`
   flex: 1;
@@ -46,7 +48,7 @@ const CategoryItem = ({ item }) => {
   const navigate = useNavigate()
   return (
     <Container>
-      <Image src={item.img} />
+      <LazyLoadImage className="image" width={'100%'} height={'100%'} src={item.img} />
       <Info>
         <Title>{item.title}</Title>
         <Button onClick={()=>navigate(`/products/${(item.title).toLowerCase()}`)}>SHOP NOW</Button>

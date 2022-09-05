@@ -4,6 +4,8 @@ import {
 } from "@mui/icons-material";
 import styled from "styled-components";
 import {useNavigate} from 'react-router-dom'
+import {LazyLoadImage} from 'react-lazy-load-image-component'
+import {Grid} from '@mui/material'
 
 const Info = styled.div`
   opacity: 0;
@@ -70,7 +72,7 @@ const Product = ({ item }) => {
   const navigate = useNavigate()
   return (
     <Container>
-        <Image src={item.img} />
+        <LazyLoadImage src={item.img} height={'75%'} width={'75%'}/>
       <Info>
         <Icon onClick={()=>navigate(`/product/${item.name}`)}>
           <SearchOutlined />

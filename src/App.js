@@ -18,6 +18,7 @@ function App() {
   return (
     <div className="app">
       <Suspense fallback={<Fallback/>}>
+        
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='register' element={ <Register/> }/>
